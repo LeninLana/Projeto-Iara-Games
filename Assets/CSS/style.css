@@ -1,0 +1,272 @@
+/* variáveis */
+
+:root {
+    --font-title: "Montserrat", sans-serif;
+    --font-text: "Quicksand", sans-serif;
+    --color-light: #f4f4f4;
+    --color-blue-300: #32cbd6;
+    --color-blue-900: #120d24;
+    --color-purple: #d34cb6;
+    --bg-video: rgba(19,15,37,.6);
+    --bg-yellow: #ffff00;
+}
+
+
+/* reset css */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-text);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* fonte dos titulos */
+h1, h2, h3, h4{
+    font-family: var(--font-title);
+}
+
+/* retirando o sublinhado de ancoragem/links */
+a {text-decoration: none;}
+
+/* retirando decoracao de lista */
+ul, ol{ list-style: none;}
+
+
+/* classes */
+.color-blue-300{ color: var(--color-blue-300)}
+.color-purple{ color: var(--color-purple)}
+
+.header-page{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 80px;
+}
+
+.header-page::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--bg-video);
+    z-index: -1;
+}
+
+.header-page h1{
+    font-size: 32px;
+    color: var(--color-light);
+}
+
+/* icone do h1 */
+.controle{
+    color: var(--color-blue-300);
+    position: relative;
+    top: 2px;
+}
+
+/* header do menu */
+.header-menu{
+    display: flex;
+    gap: 25px;
+}
+
+/* opcoes menu */
+.item-menu{
+    color: var(--color-blue-900);
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--color-light);
+}
+
+.item-menu:hover {
+    color: var(--color-blue-300);
+}
+
+/* formatacao do video */
+.video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/************* hero************/
+.hero{
+    height: calc(100dvh - 80px);
+    color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.hero h2{
+    max-width: 900px;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    text-align: center;
+    padding-inline: 20px;
+    text-wrap: balance;
+    span{
+        font-family: var(--font-title);
+    }
+}
+
+.button-group{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.button-link{
+    border: 2px solid var(--color-blue-300);
+    min-height: 30px;
+    padding: 10px 30px;
+    border-radius: 80px;
+    text-align: center;
+    position: relative;
+}
+
+.button-link::after{
+    content: '';
+    width: 0;
+    height: 100%;
+    background-color: var(--color-blue-300);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 80px;
+    filter: blur(10px);
+    opacity: .5;
+    z-index: -1;
+    transition: .3s;
+}
+
+.button-link:hover::after{
+    width: 100%;
+    cursor: pointer;
+}
+
+.button-link a{
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--color-light);
+    display: inline-block;
+    }
+
+/*********** fim hero *********/
+
+/************ cards*********** */
+
+.games{
+    background-color: var(--color-blue-900);
+    padding: 20px 50px 50px;
+}
+
+.games-title{
+    font-size: 8vw;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-blue-300);
+    font-weight: 800;
+}
+
+.grid-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card{
+    border-radius: 8px;
+    transition: .5s;
+    overflow: hidden;
+    position: relative;
+    animation: viewAnimation both;
+    animation-timeline: view(70% 20%);
+}
+
+.card:hover{
+    box-shadow: 1px 1px 10px var(--color-blue-300);
+}
+
+.card img{
+    width: 100%;
+    border-radius: 8px;
+    opacity: .7;
+    transition: .5s;
+}
+
+.card:hover img{
+    opacity: 1;
+    scale: 1.1;
+}
+
+.game-card-info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    width: 100%;
+}
+
+h3{
+    font-size: 30px;
+}
+
+.game-card-info:hover:hover h3,.bi-star-fill{
+    color: var(--bg-yellow);
+}
+
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-inline: 10px;
+}
+
+/* animando o caerd */
+
+@keyframes viewAnimation{
+    from{
+        opacity: 0;
+        scale: .5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+/************ cards*********** */
+
+/* mini responsivo */
+@media(width<= 1024px){
+    .grid-cards{
+        grid-template-columns: repeat(2, 1fr);
+}
+}
+@media(width<= 650px){
+    .header-page h1{
+        font-size: 22px;
+}
+    .grid-cards{
+        grid-template-columns: repeat 1fr;
+}
+}
