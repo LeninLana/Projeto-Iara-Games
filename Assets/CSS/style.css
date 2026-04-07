@@ -270,3 +270,152 @@ h3{
         grid-template-columns: repeat 1fr;
 }
 }
+
+
+
+/* Variáveis  */
+:root {
+    --font-body: Quicksand;
+    --color-light: rgb(255, 255, 255);
+    --color-blue-50: rgb(133, 144, 172);
+    --color-blue-100: rgb(50, 60, 85);
+    --color-blue-900: rgb(25, 52, 121);
+    --spacing-1: 10px;
+    --spacing-3: 30px;
+    --radius: 5px;
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-body);
+}
+
+header, main {
+    width: 95%;
+    margin: var(--spacing-1) auto;
+    color: var(--color-blue-900);
+}
+
+.form-search {
+    display: flex;
+    justify-content: flex-end;
+    gap: .5rem;
+    margin-top: var(--spacing-3);
+}
+
+.text-search {
+    width: 30%;
+    height: 50px;
+    border: 1px solid var(--color-blue-100);
+}
+
+.btn-form {
+    width: 100px;
+    height: 50px;
+    background-color: var(--color-blue-100);
+    border: none;
+    color: var(--color-light);
+    border-radius: var(--radius);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.btn-form:hover { 
+    background-color: var(--color-blue-900);
+}
+
+fieldset {
+    padding: var(--spacing-1);
+    margin: 20px 0;
+    border-radius: var(--radius);
+}
+
+legend {
+    padding: 0 5px;
+    font-weight: 800;
+}
+
+.form-campos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+}
+
+.form-campos div {
+    display: flex;
+    flex-direction: column;
+    margin-block: 5px;
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+input, select {
+    width: 100%;
+    color: var(--color-blue-100);
+    border: 1px solid var(--color-blue-100);
+    border-radius: var(--radius);
+    height: 3rem;
+    padding: var(--spacing-1);
+    font-size: 1rem;
+    outline: 0;
+}
+
+select {
+    appearance: none;
+    --webkit-appearence: none;
+    --moz-appearence: none;
+    cursor: pointer;
+}
+
+/* arrumando ícones */
+.form-field {
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    right: var(--spacing-1);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-blue-50);
+    pointer-events: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-container .btn-form {
+    margin-top: var(--spacing-1);
+    min-width: 20%;
+    font-size: 18px;
+}
+
+@media(width <=800px) {
+    .text-search {
+        width: 100%;
+    }
+
+    .form-campos {
+        grid-template-columns: 1fr;
+    }
+
+    .span-2 {
+        grid-column: span 1;
+    }
+
+    .btn-container .btn-form {
+        width: 100%;
+    }
+}
