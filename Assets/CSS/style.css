@@ -27,6 +27,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: var(--color-black);
+}
+
 /* fonte dos titulos */
 h1,
 h2,
@@ -146,6 +150,7 @@ ol {
     background-color: var(--primary-btn-hover);
     color: white;
     transition: .3s ease-in-out;
+    border: none;
 }
 
 .access-btn {
@@ -163,74 +168,81 @@ ol {
 /************ cards*********** */
 
 .games {
-    background-color: var(--color-gray);
-    padding: 20px 50px 50px;
+    margin-block: 7rem;
+    margin-inline: 4rem;
 }
 
-.games-title {
-    font-size: 8vw;
-    color: transparent;
-    -webkit-text-stroke: 1px var(--color-blue-300);
-    font-weight: 800;
+.section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-light);
+    margin-bottom: 1rem;
 }
 
 .grid-cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
 }
 
 .card {
-    border-radius: 8px;
+    border-radius: 20px;
     transition: .5s;
-    overflow: hidden;
     position: relative;
     animation: viewAnimation both;
-    animation-timeline: view(70% 20%);
-}
-
-.card:hover {
-    box-shadow: 1px 1px 10px var(--color-blue-300);
+    animation-timeline: view(100% 20%);
 }
 
 .card img {
     width: 100%;
-    border-radius: 8px;
-    opacity: .7;
+    border-radius: 20px;
     transition: .5s;
 }
 
-.card:hover img {
-    opacity: 1;
-    scale: 1.1;
-}
 
 .game-card-info {
+    background-image: linear-gradient(to bottom, rgba(32, 79, 149, 0.81), rgba(21, 52, 98, 0.905) 17%, rgba(10, 25, 47, 1) 41%);
     position: absolute;
     bottom: 0;
     left: 0;
     color: var(--color-light);
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 2.5rem;
     text-align: center;
     width: 100%;
+    padding-block: 1rem;
 }
 
-h3 {
-    font-size: 30px;
-}
-
-.game-card-info:hover:hover h3,
 .bi-star-fill {
-    color: var(--bg-yellow);
+    color: yellow;
+}
+
+.game-card-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.game-card-subtitle {
+    font-weight: bold;
+    font-size: .8rem;
 }
 
 .card-footer {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    padding-inline: 10px;
+    justify-content: space-around;
+}
+
+.card-footer p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.card-footer button {
+    border: none;
+    background: none;
+    color: var(--color-light);
+    cursor: pointer;
 }
 
 /* animando o card */
