@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+:root {
+    --font-title: "New Amsterdam", sans-serif;
+    --font-text: "Poppins", sans-serif;
+    --color-light: #f4f4f4;
+    --color-black: #0A192F;
+    --color-gray: #8F8A8A;
+    --color-blue: #204F95;
+    --color-green: #016D55;
+    --primary-btn: #9AC3FF;
+    --primary-btn-hover: #42659A;
+    --radius: 20px;
+    --margin-inline: 5rem
+}
+
+
+/* reset css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-text) !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-black);
+}
+
+/* fonte dos titulos */
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-title) !important;
+    font-weight: 400;
+}
+
+/* retirando o sublinhado de ancoragem/links */
+a {
+    text-decoration: none;
+}
+
+/* retirando decoracao de lista */
+ul,
+ol {
+    list-style: none;
+}
+
+
+.nav-page {
+    background-color: var(--color-black);
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: var(--margin-inline) !important;
+}
+
+.nav-page h1 {
+    color: var(--color-light);
+    display: flex;
+}
+
+.nav-title-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* header do menu */
+.nav-menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* opcoes menu */
+.item-menu {
+    color: var(--primary-btn);
+    font-size: 20px;
+}
+
+.item-menu:hover {
+    color: var(--primary-btn-hover);
+    cursor: pointer;
+
+}
