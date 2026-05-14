@@ -1,187 +1,409 @@
-/************* hero************/
-.hero {
-    height: calc(100dvh - 5rem);
-    color: var(--color-light);
+.navbar-transparent {
+    font-family: 'poppins', sans-serif;
+    font-size: 0, 75rem;
+    background-color: transparent;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.navbar .nav-link:hover {
+    color: #94d7f2 !important;
+}
+
+.navbar .nav-link.active {
+    color: #94d7f2 !important;
+}
+
+.navbar-brand {
+
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 3rem;
+    gap: 10px;
+    font-family: 'new amsterdam', sans-serif;
+    font-size: 2rem !important;
+    background: linear-gradient(90deg,
+            #70A8BF,
+            #9ADBFF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+}
+
+html,
+body {
+    font-family: 'poppins', sans-serif;
+
+
+    background: linear-gradient(180deg,
+            #0029C0 0%,
+            #01197b 100%);
+}
+
+
+
+.hero-title {
+    font-family: 'NEW AMSTERDAM', sans-serif;
+    font-size: 4rem;
+    color: white;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+}
+
+.hero-text {
+    font-family: poppins, sans-serif;
+    font-size: 1.75rem;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.hero {
+
+    min-height: 100vh;
+
     position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
 }
 
 .hero::before {
+
     content: "";
+
     position: absolute;
-    inset: 0;
-    background: url('../images/Bg-hero.jpeg') no-repeat center center;
-    background-size: cover;
-    z-index: -1;
-    opacity: 0.4;
+
+    top: 45%;
+
+    right: -175px;
+
+    transform: translateY(-50%);
+
+    width: 600px;
+
+    height: 600px;
+
+    background-image: url("../images/bg-hero.svg");
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-size: contain;
+
+    z-index: 1;
 }
 
-.texts-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
 }
 
-.texts-group>h2 {
-    font-size: clamp(1.5rem, 4vw, 3rem);
-    text-align: center;
-    text-wrap: balance;
-}
+.btn.btn-enter {
 
-.texts-group>p {
-    font-size: clamp(1rem, 2vw, 1.3rem);
-    text-align: center;
-    text-wrap: balance;
-}
+    background: transparent;
 
-.button-group {
-    display: flex;
-    gap: 2.5rem;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
+    border: 3px solid #94d7f2;
 
-.btn {
-    border-radius: 20px;
-    padding-block: .5rem;
-    padding-inline: 3rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);
-}
-
-.btn:hover {
-    cursor: pointer;
-    background-color: var(--primary-btn-hover);
     color: white;
-    transition: .3s ease-in-out;
+
+    padding: 16px 55px;
+
+    border-radius: 20px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+    box-shadow: 10px 1px 90px #120000e6;
+}
+
+.btn.btn-enter:hover {
+
+    background: linear-gradient(90deg,
+            #8de0ff,
+            #6ec6ff);
+
+    color: #0b2bd7;
+
+    transform: translateY(-3px);
+
+    border-color: transparent;
+}
+
+.btn.btn-register {
+
+    background: transparent;
+
+    border: 3px solid #94d7f2;
+
+    color: white;
+
+    padding: 16px 55px;
+
+    border-radius: 20px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+    box-shadow: 10px 1px 90px #120000e6;
+
+}
+
+.btn.btn-register:hover {
+
+    background: #94d7f2;
+
+    color: #0b2bd7;
+
+    transform: translateY(-3px);
+}
+
+.game-card {
+
+    background: linear-gradient(180deg,
+            #01197b 0%,
+            #0029C0 100%);
+
     border: none;
+
+    border-radius: 30px !important;
+
+    padding: 25px;
+
+    color: white;
 }
 
-.access-btn {
-    background-color: var(--primary-btn);
-    color: #0A192F;
+.game-card img {
+
+    min-height: 50px;
+    max-width: 100%;
+
+    border-radius: 20px;
+
+    height: 500px;
+
+    object-fit: cover;
 }
 
-.sign-in-btn {
-    border: 1px solid var(--primary-btn);
-    color: var(--primary-btn);
+.game-title {
+
+    min-height: 60px;
+    color: white;
+
+    font-family: poppins, sans-serif;
+    font-size: 1.5rem;
+
+    margin-top: 15px;
+
+    font-weight: bold;
 }
 
-/*********** fim hero *********/
+.game-tags {
 
-/************ cards*********** */
+    color: white;
 
-.games {
-    margin-block: 7rem;
-    margin-inline: 4rem;
+    display: flex;
+
+    gap: 10px;
+
+    margin: 15px 0;
+}
+
+.game-tags span {
+    font-family: poppins, sans-serif;
+    
+    border: 2px solid #000000;
+
+    background-color: #091217; 
+
+    border-radius: 20px;
+
+    padding: 4px 12px;
+
+    font-size: 0.8rem;
+}
+
+.game-info {
+
+    color: rgb(255, 255, 255);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin: 20px 0;
+}
+
+.btn-game {
+
+    width: 100%;
+
+    border-radius: 30px !important;
+    box-shadow: 10px 1px 90px #120000e6;
+
+    background: linear-gradient(90deg,
+            #8de0ff,
+            #6ec6ff);
+
+    color: #0b2bd7;
+
+    font-weight: bold;
+}
+
+.btn-game:hover {
+
+    transform: translateY(-3px);
+
+    transition: 0.3s;
+}
+
+.store-section {
+
+    min-height: 100vh;
+
+    padding: 80px 0;
 }
 
 .section-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--color-light);
-    margin-bottom: 1rem;
+
+    color: white;
+
+    margin-bottom: 40px;
+
+    font-family: 'new amsterdam', sans-serif;
 }
 
-.grid-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
+.games-list-section {
+
+    padding: 100px 0;
 }
 
-.card {
-    border-radius: 20px;
-    transition: .5s;
-    position: relative;
-    animation: viewAnimation both;
-    animation-timeline: view(100% 20%);
-}
+.games-horizontal-list {
 
-.card img {
-    width: 100%;
-    border-radius: 20px;
-    transition: .5s;
-}
-
-
-.game-card-info {
-    background-image: linear-gradient(to bottom, rgba(32, 79, 149, 0.81), rgba(21, 52, 98, 0.905) 17%, rgba(10, 25, 47, 1) 41%);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    color: var(--color-light);
     display: flex;
+
     flex-direction: column;
-    gap: 2.5rem;
-    text-align: center;
-    width: 100%;
-    padding-block: 1rem;
+
+    gap: 20px;
 }
 
-.bi-star-fill {
-    color: yellow;
-}
+.horizontal-game-card {
 
-.game-card-title {
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
-.game-card-subtitle {
-    font-weight: bold;
-    font-size: .8rem;
-}
-
-.card-footer {
     display: flex;
-    justify-content: space-around;
+
+    align-items: center;
+
+    gap: 20px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    transition: 0.3s;
 }
 
-.card-footer p {
-    font-size: 1rem;
+.horizontal-game-card:hover {
+
+    transform: translateY(-3px);
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+
+.horizontal-game-card img {
+
+    width: 140px;
+
+    border-radius: 12px;
+
+    object-fit: cover;
+}
+
+.horizontal-game-info{
+
+    color: white;
+
+    margin-bottom: 10px;
+}
+
+
+.game-page{
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+        url("/Assets/images/banners/lenda-do-heroi.png") no-repeat;
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.game-banner{
+
+    border-radius: 30px;
+
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+}
+
+.game-page-title{
+
+    color: white;
+
+    font-size: 4rem;
+
+    font-family: 'Anton', sans-serif;
+
+    margin-bottom: 20px;
+}
+
+.favorite-btn{
+
+    width: 70px;
+
+    height: 70px;
+
+    border-radius: 20px;
+
+    border: 2px solid #7dd3fc;
+
+    background: transparent;
+
+    color: white;
+}
+
+.buy-btn{
+
+    flex: 1;
+
+    border-radius: 20px;
+
+    background: #8de0ff;
+
+    color: #0b2bd7;
+
     font-weight: bold;
-}
 
-.card-footer button {
-    border: none;
-    background: none;
-    color: var(--color-light);
-    cursor: pointer;
-}
-
-/* animando o card */
-
-@keyframes viewAnimation {
-    from {
-        opacity: 0;
-        scale: .5;
-    }
-
-    to {
-        opacity: 1;
-        scale: 1;
-    }
-}
-
-/************ cards*********** */
-
-/* mini responsivo */
-@media(width<=1024px) {
-    .grid-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media(width<=650px) {
-
-    .grid-cards {
-        grid-template-columns: repeat 1fr;
-    }
+    height: 70px;
 }
