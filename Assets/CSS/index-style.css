@@ -133,6 +133,7 @@ main {
     width: 100% !important;
 }
 
+
 .section-title {
     color: white;
     font-family: 'new amsterdam', sans-serif;
@@ -194,8 +195,30 @@ main {
     gap: 3px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
+    .hero-container {
+        width: 100vw !important;
+    }
+
     .horizontal-game-info {
         padding-inline: 2rem;
+    }
+
+    .hero-content {
+        width: 80%;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-text {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero-content {
+        width: 50%;
     }
 }
