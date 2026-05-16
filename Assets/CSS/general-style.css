@@ -1,0 +1,79 @@
+:root {
+    --azul-claro: #94d7f2;
+    --azul-claro-hover: #70a8bf;
+    --roxo: #4160d8;
+    --azul-escuro: #276bf2;
+    --azul-escuro-hover: #173f73;
+    --background: #001669;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 2rem !important;
+    background: linear-gradient(90deg,
+            var(--azul-claro-hover),
+            var(--azul-claro));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar-brand>span {
+    font-family: "New Amsterdam", sans-serif !important;
+}
+
+.nav-link {
+    color: var(--azul-claro) !important;
+}
+
+.navbar .nav-link:hover {
+    color: white !important;
+}
+
+.btn {
+    border-radius: 20px !important;
+    transition: 0.3s;
+    box-shadow: 10px 1px 90px #120000e6;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: .7rem 5rem !important;
+    font-weight: 600 !important;
+}
+
+.button-primary {
+    background-color: var(--azul-claro) !important;
+    color: var(--azul-escuro-hover) !important;
+
+}
+
+.btn:hover {
+    color: white !important;
+    background-color: var(--azul-claro-hover) !important;
+}
+
+.button-secondary {
+    color: var(--azul-claro) !important;
+    background-color: transparent !important;
+    border: 1px solid var(--azul-claro) !important;
+}
+
+.tags {
+    background-color: rgba(148, 215, 242, 0.2);
+    border: 2px solid var(--background);
+    border-radius: 20px;
+    padding-inline: 2rem;
+    color: white;
+    white-space: nowrap;
+}

@@ -1,178 +1,61 @@
-.navbar-transparent {
-    font-family: 'poppins', sans-serif;
-    font-size: 0, 75rem;
-    background-color: transparent;
+header {
+    background: linear-gradient(to bottom, var(--azul-escuro),
+            #0027B5);
 }
-
-.nav-link {
-    color: white !important;
-}
-
-.navbar .nav-link:hover {
-    color: #94d7f2 !important;
-}
-
-.navbar .nav-link.active {
-    color: #94d7f2 !important;
-}
-
-
-.navbar-brand {
-
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'new amsterdam', sans-serif;
-    font-size: 2rem !important;
-    background: linear-gradient(90deg,
-            #70A8BF,
-            #9ADBFF);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-
-}
-
 
 html,
 body {
-    font-family: 'poppins', sans-serif; 
-
-
-    background: linear-gradient(180deg,
-            #0029C0 0%,
-            #01197b 100%);
+    background: linear-gradient(to bottom,
+            #0027B5 26%,
+            var(--background) 55%);
 }
 
-
-
-
-
-.register-page{
-
-    min-height: 100vh;
-
-    padding: 120px 0;
+main {
+    min-height: 90vh;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.register-title{
-
+.register-title {
     color: white;
-
-    font-size: 4rem;
-
-    margin-bottom: 60px;
-
-    font-family: 'new amsterdam', sans-serif;
+    font-size: 2rem;
+    font-family: 'New Amsterdam', sans-serif;
+    margin-bottom: 2rem;
 }
 
-.register-box{
-
-    background: rgba(255,255,255,0.05);
-
-    border: 1px solid rgba(255,255,255,0.1);
-
-    border-radius: 30px;
-
-    padding: 50px;
+.register-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 3.125rem;
 }
 
-.form-title{
-
+.form-title {
     text-align: center;
-
     color: white;
-
-    margin-bottom: 40px;
-
-    font-family: 'new amsterdam', sans-serif;
+    margin-bottom: 2rem;
+    font-family: 'New Amsterdam', sans-serif;
 }
 
-.custom-input{
-
-    background: transparent;
-
-    border: 2px solid #7dd3fc;
-
-    border-radius: 18px;
-
-    height: 60px;
-
-    color: white;
-
-    padding: 0 20px;
+.custom-input {
+    background: transparent !important;
+    border: 2px solid var(--azul-claro) !important;
+    border-radius: 20px !important;
+    height: 4rem;
+    color: var(--azul-claro) !important;
+    padding: 0 1.2rem;
 }
 
-.custom-input::placeholder{
-
-    color: #b6dfff;
+.custom-input::placeholder {
+    color: var(--azul-claro) !important;
 }
 
-.custom-input:focus{
-
-    background: transparent;
-
-    color: white;
-
-    border-color: #8de0ff;
-
-    box-shadow: 0 0 15px rgba(141,224,255,0.4);
-}
-
-.register-btn{
-
-    background: linear-gradient(
-        90deg,
-        #8de0ff,
-        #6ec6ff
-    );
-
-    border: none;
-
-    border-radius: 18px;
-
-    padding: 14px 40px;
-
-    color: #0b2bd7;
-
-    font-weight: bold;
-}   
-
-.register-btn:hover{
-
-    transform: translateY(-3px);
-
-    transition: 0.3s;
-}
-
-.input-wrapper{
-
+.input-wrapper {
     position: relative;
 }
 
-.custom-input{
-
-    height: 75px;
-
-    border-radius: 22px;
-
-    padding-right: 60px;
-
-    background: transparent;
-
-    border: 2px solid #8de0ff;
-
-    color: white;
-}
-
-.custom-input::placeholder{
-
-    color: rgba(255,255,255,0.7);
-}
-
-.input-icon{
+.input-icon {
 
     position: absolute;
 
@@ -182,7 +65,7 @@ body {
 
     transform: translateY(-50%);
 
-    color: #8de0ff;
+    color: var(--azul-claro);
 
     font-size: 1.3rem;
 }
@@ -191,26 +74,23 @@ body {
 input[type="date"]::-webkit-calendar-picker-indicator {
 
     filter:
-    invert(89%)
-    sepia(31%)
-    saturate(514%)
-    hue-rotate(165deg);
+        invert(89%) sepia(31%) saturate(514%) hue-rotate(165deg);
 
     cursor: pointer;
 }
 
-input[type="date"]{
+input[type="date"] {
 
-    color: white;
+    color: var(--azul-claro) !important;
 
-    padding-right: 22px;
+    padding-right: 1.3rem;
 
     appearance: none;
 
     -webkit-appearance: none;
 }
 
-input[type="date"]::-webkit-datetime-edit{
+input[type="date"]::-webkit-datetime-edit {
 
-    color: white;
+    color: var(--azul-claro) !important;
 }

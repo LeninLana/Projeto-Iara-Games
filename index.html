@@ -9,14 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- linkando o html com o css -->
-    <link rel="stylesheet" href="../Assets/CSS/index-style.css">
+    <link rel="stylesheet" href="Assets/CSS/general-style.css">
+    <link rel="stylesheet" href="Assets/CSS/index-style.css">
 
-    <!-- fonte dos títulos -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
-
-    <!-- fonte dos textos -->
+    <!-- fonte dos títulos e textos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -24,10 +20,9 @@
         rel="stylesheet">
 
     <!-- icone da pagina -->
-    <link rel="icon" href="../Assets/Images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="Assets/Images/favicon.ico" type="image/x-icon">
 
     <!-- linkando o bootstrap -->
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
@@ -36,506 +31,411 @@
 </head>
 
 <body>
-    <!-- cabecalho -->
-    <nav class="navbar navbar-expand-lg navbar-transparent">
-
-        <div class="container container-fluid">
-
-            <a class="navbar-brand" href="#">
-
-                <span>Iara Games</span>
-
-                <img src="../Assets/images/logo.svg" alt="Logo Iara Games">
-
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Loja</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Entrar</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- fim do cabecalho -->
-
-    <!-- hero -->
-
-    <header class="hero">
-
-        <div class="container">
-
-            <div class="row justify-content-center">
-
-                <div class="col-lg-7 text-center hero-content">
-                    <h1 class="hero-title">
-                        Onde a lenda encontra a performance.
-                    </h1>
-
-                    <p class="hero-text">
-                        Somos a maior plataforma de compra e troca de games do Brasil.
-                    </p>
-
-                    <div class="d-flex justify-content-center gap-4">
-
-                        <a href="#" class="btn btn-enter">
-                            Entrar
-                        </a>
-
-                        <a href="/Assets/pages/form.html" class="btn btn-register">
-                            Cadastrar
-                        </a>
-
-                    </div>
-
+    <header>
+        <!-- cabecalho -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container container-fluid">
+                <a class="navbar-brand" href="#">
+                    <span>Iara Games</span>
+                    <img src="Assets/images/logo.svg" alt="Logo Iara Games">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav ms-auto mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Loja</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Entrar</a>
+                        </li>
+                    </ul>
                 </div>
-
             </div>
+        </nav>
+        <!-- fim do cabecalho -->
 
+        <!-- hero -->
+        <div class="hero">
+            <div class="hero-container">
+                <div class="row justify-content-center text-hero-container">
+                    <div class="col-lg-7 text-center hero-content">
+                        <h1 class="hero-title">
+                            Onde a lenda encontra a performance.
+                        </h1>
+                        <p class="hero-text">
+                            Somos a maior plataforma de compra e troca de games do Brasil.
+                        </p>
+                        <div class="d-flex justify-content-center gap-4">
+                            <a href="#" class="btn button-primary">
+                                Entrar
+                            </a>
+                            <a href="Assets/pages/form.html" class="btn button-secondary">
+                                Cadastrar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <img src="Assets/images/bg-hero.svg" alt="Logo do Iara Games">
+            </div>
         </div>
-
     </header>
 
-    <!-- jogos de aventura -->
-
-    <section class="store-section">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Jogos de aventura
-            </h2>
-
-            <!-- LINHA -->
-            <div class="row g-4">
-
-                <!-- COLUNA 1 -->
-                <div class="col-12 col-md-6 col-lg-4">
-
-                    <!-- CARD -->
-                    <div class="card game-card">
-
-                        <img src="../Assets/images/games/lenda-do-heroi-cover.svg" class="card-img-top"
-                            alt="Capa do jogo A Lenda do Herói">
-
-                        <div class="card-body">
-
-                            <h3 class="game-title">
-                                A lenda do herói
-                            </h3>
-
-                            <div class="game-tags">
-
-                                <span>FPS</span>
-                                <span>PC</span>
-                                <span>Arcade</span>
-
+    <main>
+        <!-- jogos de aventura -->
+        <section class="store-section">
+            <div class="container">
+                <h2 class="section-title">
+                    Jogos de aventura
+                </h2>
+                <!-- LINHA -->
+                <div class="row g-4 container-sm">
+                    <!-- COLUNA 1 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <!-- CARD -->
+                        <div class="card game-card">
+                            <div class="bg-image-card-1"></div>
+                            <div class="card-body">
+                                <div>
+                                    <h3 class="game-title">
+                                        A lenda do herói
+                                    </h3>
+                                    <div class="game-tags">
+                                        <p class="tags">FPS</p>
+                                        <p class="tags">PC</p>
+                                        <p class="tags">Arcade</p>
+                                    </div>
+                                </div>
+                                <div class="game-info">
+                                    <p class="game-price">
+                                        $14,99
+                                    </p>
+                                    <p class="game-rating">
+                                        ⭐ 4.2
+                                    </p>
+                                </div>
+                                <a href="Assets/pages/gamespage/lenda-do-heroi.html"
+                                    class="btn button-primary access-game-btn">
+                                    Acessar
+                                </a>
                             </div>
-
-                            <div class="game-info">
-
-                                <p class="game-price">
-                                    $14,99
-                                </p>
-
-                                <p class="game-rating">
-                                    ★ 4.2
-                                </p>
-
-                            </div>
-
-                            <a href="/Assets/pages/gamespage/lenda-do-heroi copy 6.html" class="btn btn-game">
-                                Acessar
-                            </a>
-
                         </div>
+                    </div>
 
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card game-card">
+                            <div class="bg-image-card-3"></div>
+                            <div class="card-body">
+                                <div>
+                                    <h3 class="game-title">
+                                        Mônica no Castelo do Dragão
+                                    </h3>
+                                    <div class="game-tags">
+                                        <p class="tags">RPG</p>
+                                        <p class="tags">PC</p>
+                                        <p class="tags">Open World</p>
+                                    </div>
+                                </div>
+                                <div class="game-info">
+                                    <p class="game-price">
+                                        $14,99
+                                    </p>
+                                    <p class="game-rating">
+                                        ⭐ 4.2
+                                    </p>
+                                </div>
+                                <a href="Assets/pages/gamespage/monica-game.html"
+                                    class="btn button-primary access-game-btn">
+                                    Acessar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <!-- CARD -->
+                        <div class="card game-card">
+                            <div class="bg-image-card-6"></div>
+                            <div class="card-body">
+                                <div>
+                                    <h3 class="game-title">
+                                        Momodora
+                                    </h3>
+                                    <div class="game-tags">
+                                        <p class="tags">FPS</p>
+                                        <p class="tags">PC</p>
+                                        <p class="tags">Arcade</p>
+                                    </div>
+                                </div>
+                                <div class="game-info">
+                                    <p class="game-price">
+                                        $14,99
+                                    </p>
+                                    <p class="game-rating">
+                                        ⭐ 4.2
+                                    </p>
+                                </div>
+                                <a href="Assets/pages/gamespage/momodora.html"
+                                    class="btn button-primary access-game-btn">
+                                    Acessar
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
-
-                <!-- COLUNA 2 -->
-                <div class="col-12 col-md-6 col-lg-4">
-
-                    <div class="card game-card">
-
-                        <img src="../Assets/images/games/dandara-game-cover.svg" class="card-img-top"
-                            alt="Capa do jogo dandara">
-
-                        <div class="card-body">
-
-                            <h3 class="game-title">
-                                Dandara
-
-
-                            </h3>
-
-                            <div class="game-tags">
-
-                                <span>RPG</span>
-                                <span>PC</span>
-                                <span>Open World</span>
-
-                            </div>
-
-                            <div class="game-info">
-
-                                <p class="game-price">
-                                    $29,99
-                                </p>
-
-                                <p class="game-rating">
-                                    ★ 4.8
-                                </p>
-
-                            </div>
-
-                            <a href="/Assets/pages/gamespage/dandara-game.html" class="btn btn-game">
-                                Acessar
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- COLUNA 3 -->
-                <div class="col-12 col-md-6 col-lg-4">
-
-                    <div class="card game-card">
-
-                        <img src="../Assets/images/games/monica-game-cover.svg" class="card-img-top"
-                            alt="Capa do jogo monica no castelo do dragão">
-
-                        <div class="card-body">
-
-                            <h3 class="game-title">
-                                Mônica no Castelo do Dragão
-                            </h3>
-
-                            <div class="game-tags">
-
-                                <span>RPG</span>
-                                <span>PC</span>
-                                <span>Open World</span>
-
-                            </div>
-
-                            <div class="game-info">
-
-                                <p class="game-price">
-                                    $29,99
-                                </p>
-
-                                <p class="game-rating">
-                                    ★ 4.8
-                                </p>
-
-                            </div>
-
-                            <a href="/Assets/pages/gamespage/monica-game.html" class="btn btn-game">
-                                Acessar
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
             </div>
+        </section>
 
-        </div>
+        <!-- jogos de ação -->
 
-    </section>
-
-    <!-- jogos de ação -->
-
-    <section class="store-section">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Jogos de ação
-            </h2>
-
-            <!-- LINHA -->
-            <div class="row g-4">
-
-                <!-- COLUNA 1 -->
-                <div class="col-12 col-md-6 col-lg-4">
-
-                    <!-- CARD -->
-                    <div class="card game-card">
-
-                        <img src="../Assets/images/games/mullet-madjack-game-cover.svg" class="card-img-top"
-                            alt="Capa do jogo mullet madjack">
-
-                        <div class="card-body">
-
-                            <h3 class="game-title">
-                                Mullet Madjack
-                            </h3>
-
-                            <div class="game-tags">
-
-                                <span>FPS</span>
-                                <span>PC</span>
-                                <span>Arcade</span>
-
+        <section class="store-section">
+            <div class="container">
+                <h2 class="section-title">
+                    Jogos de ação
+                </h2>
+                <!-- LINHA -->
+                <div class="row g-4 container-sm">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <!-- CARD -->
+                        <div class="card game-card">
+                            <div class="bg-image-card-4"></div>
+                            <div class="card-body">
+                                <div>
+                                    <h3 class="game-title">
+                                        Mullet Madjack
+                                    </h3>
+                                    <div class="game-tags">
+                                        <p class="tags">FPS</p>
+                                        <p class="tags">PC</p>
+                                        <p class="tags">Arcade</p>
+                                    </div>
+                                </div>
+                                <div class="game-info">
+                                    <p class="game-price">
+                                        $14,99
+                                    </p>
+                                    <p class="game-rating">
+                                        ⭐ 4.2
+                                    </p>
+                                </div>
+                                <a href="Assets/pages/gamespage/mullet-madjack-game.html"
+                                    class="btn button-primary access-game-btn">
+                                    Acessar
+                                </a>
                             </div>
-
-                            <div class="game-info">
-
-                                <p class="game-price">
-                                    $14,99
-                                </p>
-
-                                <p class="game-rating">
-                                    ★ 4.2
-                                </p>
-
-                            </div>
-
-                            <a href="/Assets/pages/gamespage/mullet-madjack-game.html" class="btn btn-game">
-                                Acessar
-                            </a>
-
                         </div>
-
                     </div>
 
-                </div>
-
-                <!-- COLUNA 2 -->
-                <div class="col-12 col-md-6 col-lg-4">
-
-                    <div class="card game-card">
-
-                        <img src="../Assets/images/games/blazing-game-cover.svg" class="card-img-top"
-                            alt="Capa do jogo Blaziing game">
-
-                        <div class="card-body">
-
-                            <h3 class="game-title">
-                                Blazzing
-                            </h3>
-
-                            <div class="game-tags">
-
-                                <span>RPG</span>
-                                <span>PC</span>
-                                <span>Open World</span>
-
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card game-card">
+                            <div class="bg-image-card-2"></div>
+                            <div class="card-body">
+                                <div>
+                                    <h3 class="game-title">
+                                        Dandara
+                                    </h3>
+                                    <div class="game-tags">
+                                        <p class="tags">RPG</p>
+                                        <p class="tags">PC</p>
+                                        <p class="tags">Open World</p>
+                                    </div>
+                                </div>
+                                <div class="game-info">
+                                    <p class="game-price">
+                                        $14,99
+                                    </p>
+                                    <p class="game-rating">
+                                        ⭐ 4.2
+                                    </p>
+                                </div>
+                                <a href="Assets/pages/gamespage/dandara-game.html"
+                                    class="btn button-primary access-game-btn">
+                                    Acessar
+                                </a>
                             </div>
-
-                            <div class="game-info">
-
-                                <p class="game-price">
-                                    $29,99
-                                </p>
-
-                                <p class="game-rating">
-                                    ★ 4.8
-                                </p>
-
-                            </div>
-
-                            <a href="/Assets/pages/gamespage/blazing-game.html" class="btn btn-game">
-                                Acessar
-                            </a>
-
                         </div>
-
                     </div>
 
-                </div>
-
-                <!-- COLUNA 3 -->
-                <div class="col-12 col-md-6 col-lg-4">
-
-                    <div class="card game-card">
-
-                        <img src="../Assets/images/games/momodora-game-cover.svg" class="card-img-top"
-                            alt="Capa do jogo momodora">
-
-                        <div class="card-body">
-
-                            <h3 class="game-title">
-                                Momodora
-                            </h3>
-
-                            <div class="game-tags">
-
-                                <span>RPG</span>
-                                <span>PC</span>
-                                <span>Open World</span>
-
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <!-- CARD -->
+                        <div class="card game-card">
+                            <div class="bg-image-card-5"></div>
+                            <div class="card-body">
+                                <div>
+                                    <h3 class="game-title">
+                                        Blazing
+                                    </h3>
+                                    <div class="game-tags">
+                                        <p class="tags">FPS</p>
+                                        <p class="tags">PC</p>
+                                        <p class="tags">Arcade</p>
+                                    </div>
+                                </div>
+                                <div class="game-info">
+                                    <p class="game-price">
+                                        $14,99
+                                    </p>
+                                    <p class="game-rating">
+                                        ⭐ 4.2
+                                    </p>
+                                </div>
+                                <a href="Assets/pages/gamespage/blazing-game.html"
+                                    class="btn button-primary access-game-btn">
+                                    Acessar
+                                </a>
                             </div>
-
-                            <div class="game-info">
-
-                                <p class="game-price">
-                                    $29,99
-                                </p>
-
-                                <p class="game-rating">
-                                    ★ 4.8
-                                </p>
-
-                            </div>
-
-                            <a href="/Assets/pages/gamespage/momodora.html" class="btn btn-game">
-                                Acessar
-                            </a>
-
                         </div>
-
                     </div>
 
+
                 </div>
-
-
             </div>
+        </section>
 
-        </div>
 
-    </section>
+        <section class="games-list-section mb-5">
+            <div class="container">
+                <h2 class="section-title">
+                    Todos os jogos
+                </h2>
+                <!-- LISTA HORIZONTAL -->
+                <div class="row g-4 container-sm">
+                    <!-- ITEM -->
+                    <a href="Assets/pages/gamespage/lenda-do-heroi.html" class="horizontal-game-card">
+                        <div class="container-image"><img src="Assets/images/games/lenda-do-heroi-cover.svg"
+                                alt="Capa do jogo A lenda do herói"></div>
+                        <div class="horizontal-game-info">
+                            <div>
+                                <h3>A lenda do herói</h3>
+                                <div class="game-tags-horizontal">
+                                    <p class="tags">FPS</p>
+                                    <p class="tags">PC</p>
+                                    <p class="tags">Arcade</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="game-price">$14,99</p>
+                                <p class="game-rating">
+                                    ⭐ 4.2
+                                </p>
+                            </div>
+                        </div>
+                    </a>
 
-    <section class="games-list-section">
+                    <a href="Assets/pages/gamespage/monica-game.html" class="horizontal-game-card">
+                        <div class="container-image"><img src="Assets/images/games/monica-game-cover.svg"
+                                alt="Capa do jogo Mônica no Castelo do Dragão">
+                        </div>
+                        <div class="horizontal-game-info">
+                            <div>
+                                <h3>Mônica: No Castelo do Dragão</h3>
+                                <div class="game-tags-horizontal">
+                                    <p class="tags">FPS</p>
+                                    <p class="tags">PC</p>
+                                    <p class="tags">Arcade</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="game-price">$14,99</p>
+                                <p class="game-rating">
+                                    ⭐ 4.2
+                                </p>
+                            </div>
+                        </div>
+                    </a>
 
-        <div class="container">
+                    <a href="Assets/pages/gamespage/dandara-game.html" class="horizontal-game-card">
+                        <div class="container-image"><img src="Assets/images/games/dandara-game-cover.svg"
+                                alt="Capa do jogo dandara">
+                        </div>
+                        <div class="horizontal-game-info">
+                            <div>
+                                <h3>Dandara</h3>
+                                <div class="game-tags-horizontal">
+                                    <p class="tags">FPS</p>
+                                    <p class="tags">PC</p>
+                                    <p class="tags">Arcade</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="game-price">$14,99</p>
+                                <p class="game-rating">
+                                    ⭐ 4.2
+                                </p>
+                            </div>
+                        </div>
+                    </a>
 
-            <h2 class="section-title">
-                Todos os jogos
-            </h2>
+                    <a href="Assets/pages/gamespage/mullet-madjack-game.html" class="horizontal-game-card">
+                        <div class="container-image"><img src="Assets/images/games/mullet-madjack-game-cover.svg"
+                                alt="Capa do jogo Mullet Madjack">
+                        </div>
+                        <div class="horizontal-game-info">
+                            <div>
+                                <h3>Mullet Madjack</h3>
+                                <div class="game-tags-horizontal">
+                                    <p class="tags">FPS</p>
+                                    <p class="tags">PC</p>
+                                    <p class="tags">Arcade</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="game-price">$14,99</p>
+                                <p class="game-rating">
+                                    ⭐ 4.2
+                                </p>
+                            </div>
+                        </div>
+                    </a>
 
-            <!-- LISTA HORIZONTAL -->
-            <div class="games-horizontal-list">
+                    <a href="Assets/pages/gamespage/blazing-game.html" class="horizontal-game-card">
+                        <div class="container-image"><img src="Assets/images/games/blazing-game-cover.svg"
+                                alt="Capa do jogo Blazing">
+                        </div>
+                        <div class="horizontal-game-info">
+                            <div>
+                                <h3>Blazing</h3>
+                                <div class="game-tags-horizontal">
+                                    <p class="tags">FPS</p>
+                                    <p class="tags">PC</p>
+                                    <p class="tags">Arcade</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="game-price">$14,99</p>
+                                <p class="game-rating">
+                                    ⭐ 4.2
+                                </p>
+                            </div>
+                        </div>
+                    </a>
 
-                <!-- ITEM -->
-                <div class="horizontal-game-card">
-
-                    <img src="../Assets/images/games/lenda-do-heroi-cover.svg" alt="Capa do jogo A lenda do héroi">
-
-                    <div class="horizontal-game-info">
-
-                        <h3>A lenda do herói</h3>
-
-                        <p>RPG • PC</p>
-
-                        <span>$14,99</span>
-
-                    </div>
-
+                    <a href="Assets/pages/gamespage/momodora.html" class="horizontal-game-card">
+                        <div class="container-image"><img src="Assets/images/games/momodora-game-cover.svg"
+                                alt="Capa do jogo Momodora">
+                        </div>
+                        <div class="horizontal-game-info">
+                            <div>
+                                <h3>Momodora</h3>
+                                <div class="game-tags-horizontal">
+                                    <p class="tags">FPS</p>
+                                    <p class="tags">PC</p>
+                                    <p class="tags">Arcade</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="game-price">$14,99</p>
+                                <p class="game-rating">
+                                    ⭐ 4.2
+                                </p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-
-                <!-- ITEM -->
-                <div class="horizontal-game-card">
-
-                    <img src="../Assets/images/games/dandara-game-cover.svg" alt="Capa do jogo dandara">
-
-                    <div class="horizontal-game-info">
-
-                        <h3>Dandara</h3>
-
-                        <p>Open World • PC</p>
-
-                        <span>$29,99</span>
-
-                    </div>
-
-
-                </div>
-
-                
-                    <!-- ITEM -->
-                    <div class="horizontal-game-card">
-
-                        <img src="../Assets/images/games/monica-game-cover.svg" alt="Capa do jogo monica no castelo do dragão">
-
-                        <div class="horizontal-game-info">
-
-                            <h3>Mônica no castelo do Dragão</h3>
-
-                            <p>Open World • PC</p>
-
-                            <span>$29,99</span>
-
-                        </div>
-
-
-                    </div>
-
-                    <!-- ITEM -->
-                    <div class="horizontal-game-card">
-
-                        <img src="../Assets/images/games/momodora-game-cover.svg" alt="Capa do jogo momodora">
-
-                        <div class="horizontal-game-info">
-
-                            <h3>Momodora</h3>
-
-                            <p>Open World • PC</p>
-
-                            <span>$29,99</span>
-
-                        </div>
-
-
-                    </div>
-
-                    <!-- ITEM -->
-                    <div class="horizontal-game-card">
-
-                        <img src="../Assets/images/games/mullet-madjack-game-cover.svg" alt="Capa do jogo mullet madjack">
-
-                        <div class="horizontal-game-info">
-
-                            <h3>Mônica no castelo do Dragão</h3>
-
-                            <p>Open World • PC</p>
-
-                            <span>$29,99</span>
-
-                        </div>
-
-
-                    </div>
-
-                    <div class="horizontal-game-card">
-
-                        <img src="../Assets/images/games/blazing-game-cover.svg" alt="Capa do jogo blazin">
-
-                        <div class="horizontal-game-info">
-
-                            <h3>Blazing</h3>
-
-                            <p>Open World • PC</p>
-
-                            <span>$29,99</span>
-
-                        </div>
-
-
-                    </div>
-            </div>
-
-    </section>
-
-
+        </section>
+    </main>
 
 </body>
 

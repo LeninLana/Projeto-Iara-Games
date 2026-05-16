@@ -1,48 +1,14 @@
-.navbar-transparent {
-    font-family: 'poppins', sans-serif;
-    font-size: 0, 75rem;
-    background-color: transparent;
-}
-
-.nav-link {
-    color: white !important;
-}
-
-.navbar .nav-link:hover {
-    color: #94d7f2 !important;
-}
-
-.navbar .nav-link.active {
-    color: #94d7f2 !important;
-}
-
-.navbar-brand {
-
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'new amsterdam', sans-serif;
-    font-size: 2rem !important;
-    background: linear-gradient(90deg,
-            #70A8BF,
-            #9ADBFF);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-
+header {
+    background: linear-gradient(to bottom, var(--azul-escuro),
+            #0027B5 20%);
 }
 
 html,
 body {
-    font-family: 'poppins', sans-serif;
-
-
-    background: linear-gradient(180deg,
-            #0029C0 0%,
-            #01197b 100%);
+    background: linear-gradient(to bottom,
+            #0027B5 26%,
+            var(--background) 55%);
 }
-
 
 
 .hero-title {
@@ -51,359 +17,185 @@ body {
     color: white;
     line-height: 1;
     text-transform: uppercase;
-    margin-bottom: 30px;
 
 }
 
 .hero-text {
-    font-family: poppins, sans-serif;
     font-size: 1.75rem;
     color: white;
-    margin-bottom: 40px;
 }
 
 .hero {
-
     min-height: 100vh;
+}
 
-    position: relative;
-
-    overflow: hidden;
-
-    display: flex;
-
+.hero-container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-
+    width: 99vw !important;
+    max-width: 100vw !important;
 }
 
-.hero::before {
-
-    content: "";
-
-    position: absolute;
-
-    top: 45%;
-
-    right: -175px;
-
-    transform: translateY(-50%);
-
-    width: 600px;
-
-    height: 600px;
-
-    background-image: url("../images/bg-hero.svg");
-
-    background-repeat: no-repeat;
-
-    background-position: center;
-
-    background-size: contain;
-
-    z-index: 1;
+.text-hero-container {
+    grid-column: 2;
+    justify-self: end;
 }
 
-.hero-content {
-
-    position: relative;
-
-    z-index: 2;
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
 }
 
-.btn.btn-enter {
-
-    background: transparent;
-
-    border: 3px solid #94d7f2;
-
-    color: white;
-
-    padding: 16px 55px;
-
-    border-radius: 20px;
-
-    font-weight: 600;
-
-    transition: 0.3s;
-
-    box-shadow: 10px 1px 90px #120000e6;
-}
-
-.btn.btn-enter:hover {
-
-    background: linear-gradient(90deg,
-            #8de0ff,
-            #6ec6ff);
-
-    color: #0b2bd7;
-
-    transform: translateY(-3px);
-
-    border-color: transparent;
-}
-
-.btn.btn-register {
-
-    background: transparent;
-
-    border: 3px solid #94d7f2;
-
-    color: white;
-
-    padding: 16px 55px;
-
-    border-radius: 20px;
-
-    font-weight: 600;
-
-    transition: 0.3s;
-
-    box-shadow: 10px 1px 90px #120000e6;
-
-}
-
-.btn.btn-register:hover {
-
-    background: #94d7f2;
-
-    color: #0b2bd7;
-
-    transform: translateY(-3px);
-}
 
 .game-card {
-
-    background: linear-gradient(180deg,
-            #01197b 0%,
-            #0029C0 100%);
-
-    border: none;
-
-    border-radius: 30px !important;
-
-    padding: 25px;
-
-    color: white;
+    background: linear-gradient(to bottom, var(--background) 24%, var(--azul-escuro) 100%);
+    border: none !important;
+    border-radius: 20px !important;
+    padding: 1.5rem;
 }
 
-.game-card img {
-
-    min-height: 50px;
-    max-width: 100%;
-
+.bg-image-card-1 {
+    background: url('../images/games/lenda-do-heroi-cover.svg') top center no-repeat !important;
+    height: 40vh;
     border-radius: 20px;
+}
 
-    height: 500px;
+.bg-image-card-2 {
+    background: url('../images/games/dandara-game-cover.svg') no-repeat top center !important;
+    height: 40vh;
+    border-radius: 20px;
+}
 
-    object-fit: cover;
+.bg-image-card-3 {
+    background: url('../images/games/monica-game-cover.svg') no-repeat top center !important;
+    height: 40vh;
+    border-radius: 20px;
+}
+
+.bg-image-card-4 {
+    background: url('../images/games/mullet-madjack-game-cover.svg') no-repeat top center !important;
+    height: 40vh;
+    border-radius: 20px;
+}
+
+.bg-image-card-5 {
+    background: url('../images/games/blazing-game-cover.svg') no-repeat top center !important;
+    height: 40vh;
+    border-radius: 20px;
+}
+
+.bg-image-card-6 {
+    background: url('../images/games/momodora-game-cover.svg') no-repeat top center !important;
+    height: 40vh;
+    border-radius: 20px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem !important;
 }
 
 .game-title {
-
-    min-height: 60px;
     color: white;
-
-    font-family: poppins, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
-
-    margin-top: 15px;
-
     font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .game-tags {
-
-    color: white;
-
     display: flex;
-
     gap: 10px;
-
-    margin: 15px 0;
+    overflow-y: auto;
+    scrollbar-width: none;
 }
 
-.game-tags span {
-    font-family: poppins, sans-serif;
-    
-    border: 2px solid #000000;
-
-    background-color: #091217; 
-
-    border-radius: 20px;
-
-    padding: 4px 12px;
-
-    font-size: 0.8rem;
+.game-tags::-webkit-scrollbar {
+    display: none;
 }
 
 .game-info {
-
     color: rgb(255, 255, 255);
-
     display: flex;
-
     justify-content: space-between;
-
-    margin: 20px 0;
 }
 
-.btn-game {
-
-    width: 100%;
-
-    border-radius: 30px !important;
-    box-shadow: 10px 1px 90px #120000e6;
-
-    background: linear-gradient(90deg,
-            #8de0ff,
-            #6ec6ff);
-
-    color: #0b2bd7;
-
+.game-price {
     font-weight: bold;
 }
 
-.btn-game:hover {
-
-    transform: translateY(-3px);
-
-    transition: 0.3s;
-}
-
-.store-section {
-
-    min-height: 100vh;
-
-    padding: 80px 0;
+.access-game-btn {
+    width: 100% !important;
 }
 
 .section-title {
-
     color: white;
-
-    margin-bottom: 40px;
-
     font-family: 'new amsterdam', sans-serif;
 }
 
-.games-list-section {
-
-    padding: 100px 0;
-}
-
-.games-horizontal-list {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 20px;
-}
-
 .horizontal-game-card {
-
     display: flex;
-
     align-items: center;
-
     gap: 20px;
 
-    background: rgba(255, 255, 255, 0.05);
-
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background-image: linear-gradient(to right, var(--background) 24%, var(--azul-escuro) 100%);
 
     border-radius: 20px;
 
-    padding: 20px;
-
     transition: 0.3s;
+
+    padding: 0 !important;
 }
 
 .horizontal-game-card:hover {
-
+    cursor: pointer;
     transform: translateY(-3px);
 
-    background: rgba(255, 255, 255, 0.08);
 }
 
+.container-image {
+    width: 25vw;
+    height: 25vh;
+}
 
 .horizontal-game-card img {
-
-    width: 140px;
-
-    border-radius: 12px;
-
+    width: 100%;
+    border-radius: 20px 0 0 20px;
     object-fit: cover;
+    height: 100%;
+    object-position: 50% 30%;
 }
 
-.horizontal-game-info{
-
+.horizontal-game-info {
     color: white;
-
-    margin-bottom: 10px;
-}
-
-
-.game-page{
-
-    min-height: 100vh;
-
     display: flex;
-
+    justify-content: space-between;
     align-items: center;
-
-    background:
-        url("/Assets/images/banners/lenda-do-heroi.png") no-repeat;
-
-    background-size: cover;
-
-    background-position: center;
+    width: 58vw;
+    padding-inline: 5rem;
 }
 
-.game-banner{
-
-    border-radius: 30px;
-
-    box-shadow: 0 0 30px rgba(0,0,0,0.3);
-}
-
-.game-page-title{
-
-    color: white;
-
-    font-size: 4rem;
-
-    font-family: 'Anton', sans-serif;
-
-    margin-bottom: 20px;
-}
-
-.favorite-btn{
-
-    width: 70px;
-
-    height: 70px;
-
-    border-radius: 20px;
-
-    border: 2px solid #7dd3fc;
-
-    background: transparent;
-
-    color: white;
-}
-
-.buy-btn{
-
-    flex: 1;
-
-    border-radius: 20px;
-
-    background: #8de0ff;
-
-    color: #0b2bd7;
-
+.horizontal-game-info h3 {
     font-weight: bold;
+    max-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
 
-    height: 70px;
+.game-tags-horizontal {
+    max-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+}
+
+@media (max-width: 1024px) {
+    .horizontal-game-info {
+        padding-inline: 2rem;
+    }
 }

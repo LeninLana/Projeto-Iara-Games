@@ -7,13 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-    <!-- fonte dos títulos -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
-
-    <!-- fonte dos textos -->
+    <!-- fonte dos títulos e textos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -30,64 +24,41 @@
 
     <title>A Lenda do Herói</title>
 
-    <link rel="stylesheet" href="/Assets/CSS/gamepage-style.css">
+    <link rel="stylesheet" href="../../CSS/general-style.css">
+    <link rel="stylesheet" href="../../CSS/gamepage-style.css">
 
 </head>
-<body>
+
+<body class="game-1">
+
+    <header>
+        <!-- cabecalho -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container container-fluid">
+                <a class="navbar-brand" href="../../../index.html">
+                    <span>Iara Games</span>
+                    <img src="../../images/logo.svg" alt="Logo Iara Games">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav ms-auto mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../../../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Loja</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Entrar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
 
     <!-- PÁGINA -->
-    <main class="game-page heroi-page">
-
-        <!-- OVERLAY -->
-        <div class="game-overlay"></div>
-
-        <!-- NAVBAR -->
-        <nav class="navbar navbar-expand-lg navbar-transparent">
-
-            <div class="container">
-
-                <!-- LOGO -->
-                <a class="navbar-brand d-flex align-items-center gap-2"
-                    href="/index.html">
-
-                    IARA GAMES
-
-                    <img src="/Assets/images/logo.svg"
-                        alt="Logo Iara Games"
-                        class="logo-icon">
-
-                </a>
-
-                <!-- MENU -->
-                <div class="collapse navbar-collapse">
-
-                    <ul class="navbar-nav ms-auto">
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="/index.html">
-                                Início
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">
-                                Loja
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Entrar
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-        </nav>
+    <main>
 
         <!-- CONTEÚDO -->
         <section class="game-content">
@@ -97,12 +68,11 @@
                 <div class="row align-items-center g-5">
 
                     <!-- IMAGEM -->
-                    <div class="col-lg-7">
+                    <div class="col-lg-7 image-container">
 
                         <div class="banner-wrapper">
 
-                            <img src="/Assets/images/banners/lenda-do-heroi.png"
-                                alt="Banner do jogo"
+                            <img src="../../images/banners/lenda-do-heroi.png" alt="Banner do jogo"
                                 class="img-fluid game-banner">
 
                         </div>
@@ -114,29 +84,29 @@
 
                         <div class="game-info-box">
 
-                            <h1 class="game-title">
+                            <h2 class="game-title">
 
                                 A LENDA DO HERÓI
 
-                            </h1>
+                            </h2>
 
                             <div class="game-tags">
 
-                                <span>FPS</span>
-                                <span>PC</span>
-                                <span>Arcade</span>
+                                <p class="tags">FPS</p>
+                                <p class="tags">PC</p>
+                                <p class="tags">Arcade</p>
 
                             </div>
 
                             <div class="game-buttons">
 
-                                <button class="btn favorite-btn">
+                                <button class="btn button-secondary favorite">
 
-                                    ☆
+                                    <p>☆</p>
 
                                 </button>
 
-                                <button class="btn buy-btn">
+                                <button class="btn button-primary">
 
                                     Comprar
 
