@@ -306,10 +306,36 @@
                 <h2 class="section-title">
                     Todos os jogos
                 </h2>
+
+                <div class="category-filter" aria-labelledby="category-filter-title">
+                    <div class="category-filter__intro">
+                        <span class="category-filter__eyebrow">CATÁLOGO</span>
+                        <p id="category-filter-title">Escolha seu estilo de jogo</p>
+                    </div>
+
+                    <div class="category-filter__options" role="group" aria-label="Filtrar jogos por categoria">
+                        <button type="button" class="category-filter__button is-active" data-category-filter="todos"
+                            aria-pressed="true">
+                            Todos <span>6</span>
+                        </button>
+                        <button type="button" class="category-filter__button" data-category-filter="aventura"
+                            aria-pressed="false">
+                            Aventura <span>3</span>
+                        </button>
+                        <button type="button" class="category-filter__button" data-category-filter="acao"
+                            aria-pressed="false">
+                            Ação <span>3</span>
+                        </button>
+                    </div>
+                </div>
+
+                <p class="category-filter__result" aria-live="polite" aria-atomic="true">6 jogos encontrados</p>
+
                 <!-- LISTA HORIZONTAL -->
                 <div class="row g-4 container-sm">
                     <!-- ITEM -->
-                    <a href="Assets/pages/gamespage/lenda-do-heroi.html" class="horizontal-game-card">
+                    <a href="Assets/pages/gamespage/lenda-do-heroi.html" class="horizontal-game-card"
+                        data-game-category="aventura">
                         <div class="container-image"><img src="Assets/images/games/lenda-do-heroi-cover.svg"
                                 alt="Capa do jogo A lenda do herói"></div>
                         <div class="horizontal-game-info">
@@ -330,7 +356,8 @@
                         </div>
                     </a>
 
-                    <a href="Assets/pages/gamespage/monica-game.html" class="horizontal-game-card">
+                    <a href="Assets/pages/gamespage/monica-game.html" class="horizontal-game-card"
+                        data-game-category="aventura">
                         <div class="container-image"><img src="Assets/images/games/monica-game-cover.svg"
                                 alt="Capa do jogo Mônica no Castelo do Dragão">
                         </div>
@@ -352,7 +379,8 @@
                         </div>
                     </a>
 
-                    <a href="Assets/pages/gamespage/dandara-game.html" class="horizontal-game-card">
+                    <a href="Assets/pages/gamespage/dandara-game.html" class="horizontal-game-card"
+                        data-game-category="acao">
                         <div class="container-image"><img src="Assets/images/games/dandara-game-cover.svg"
                                 alt="Capa do jogo dandara">
                         </div>
@@ -374,7 +402,8 @@
                         </div>
                     </a>
 
-                    <a href="Assets/pages/gamespage/mullet-madjack-game.html" class="horizontal-game-card">
+                    <a href="Assets/pages/gamespage/mullet-madjack-game.html" class="horizontal-game-card"
+                        data-game-category="acao">
                         <div class="container-image"><img src="Assets/images/games/mullet-madjack-game-cover.svg"
                                 alt="Capa do jogo Mullet Madjack">
                         </div>
@@ -396,7 +425,8 @@
                         </div>
                     </a>
 
-                    <a href="Assets/pages/gamespage/blazing-game.html" class="horizontal-game-card">
+                    <a href="Assets/pages/gamespage/blazing-game.html" class="horizontal-game-card"
+                        data-game-category="acao">
                         <div class="container-image"><img src="Assets/images/games/blazing-game-cover.svg"
                                 alt="Capa do jogo Blazing">
                         </div>
@@ -418,7 +448,8 @@
                         </div>
                     </a>
 
-                    <a href="Assets/pages/gamespage/momodora.html" class="horizontal-game-card">
+                    <a href="Assets/pages/gamespage/momodora.html" class="horizontal-game-card"
+                        data-game-category="aventura">
                         <div class="container-image"><img src="Assets/images/games/momodora-game-cover.svg"
                                 alt="Capa do jogo Momodora">
                         </div>
@@ -442,6 +473,8 @@
                 </div>
         </section>
     </main>
+
+    <script src="Assets/JS/filterGames.js"></script>
 
 </body>
 
