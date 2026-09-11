@@ -1,71 +1,99 @@
-# Iara Games: Documento Integrado de Estratégia e Design
+# Iara Games
 
-🚧 _Este documento estabelece as bases conceituais, mercadológicas e visuais para o desenvolvimento da plataforma Iara Games, unindo a análise de mercado às diretrizes de identidade visual._ 🚧
+Protótipo acadêmico de uma plataforma brasileira para descoberta e compra de jogos digitais nacionais. O projeto valoriza produções independentes, navegação simples e uma identidade visual inspirada nas águas e na lenda da Iara.
 
-## 1. Proposta da Iara Games 🎮
+## Sobre o projeto
 
-A **Iara Games** é uma plataforma brasileira de distribuição de jogos digitais que busca ser o ponto de encontro entre desenvolvedores independentes nacionais e o público local.
+A Iara Games foi criada como uma vitrine para aproximar jogadores e desenvolvedores brasileiros. A página inicial apresenta jogos em destaque, seções temáticas e um catálogo completo. Cada título também possui uma página própria com informações e ações de compra e favorito.
 
-👉 **Missão:** Encantar o jogador através de uma curadoria de excelência e uma experiência de compra fluida. A plataforma utiliza a mística da Iara (figura das águas) para simbolizar atração e profundidade, transformando o consumo de jogos em uma descoberta cultural brasileira.
+Nesta fase, o projeto funciona inteiramente no navegador e não possui banco de dados, autenticação ou processamento de pagamentos.
 
-## 2. Análise de Mercado (Benchmarking) 📊
+## Funcionalidades
 
-👉 Para superar as expectativas do usuário, analisamos três gigantes do setor para extrair as melhores práticas:
+- Vitrines de jogos de aventura e ação.
+- Catálogo com seis jogos e páginas individuais.
+- Filtro do catálogo por categoria: Todos, Aventura e Ação.
+- Botão para salvar ou remover um jogo dos favoritos.
+- Alteração visual do ícone entre os estados outlined e filled.
+- Notificação temporária após salvar um jogo.
+- Formulário visual de cadastro.
+- Interface responsiva para desktop e dispositivos móveis.
 
-### 2.1 Steam (Referência em Fluidez)
+## Tecnologias utilizadas
 
-🟢 **Pontos Positivos:** Excelente responsividade, software fluido e ferramentas robustas de organização de biblioteca.
+- HTML5
+- CSS3
+- JavaScript puro
+- Bootstrap 5.3.8 via CDN
+- Google Fonts: New Amsterdam e Poppins
+- Bootstrap Icons no formulário de cadastro
 
-🟣 **Lição:** A Iara Games deve priorizar a performance do software, o sentimento de "posse" e a comunidade do usuário.
+Não é necessário instalar pacotes ou executar `npm install`.
 
-### 2.2 Epic Games Store (Referência em Interface)
+## Estrutura principal
 
-🟢 **Pontos Positivos:** Interface simples, objetiva e uso intuitivo de ícones.
+```text
+Projeto-Iara-Games/
+├── index.html
+├── Assets/
+│   ├── CSS/
+│   │   ├── general-style.css
+│   │   ├── index-style.css
+│   │   ├── gamepage-style.css
+│   │   └── form-style.css
+│   ├── JS/
+│   │   ├── filterGames.js
+│   │   ├── saveGame.js
+│   │   └── telMask.js
+│   ├── images/
+│   └── pages/
+│       ├── form.html
+│       └── gamespage/
+└── README.md
+```
 
-🔴 **Pontos Negativos:** Banners excessivamente grandes geram espaços vazios e comprometem o aproveitamento visual.
+## Como executar
 
-🟣 **Lição:** Adotaremos a clareza da Epic, mas com um grid mais otimizado para evitar o "vazio" visual.
+1. Clone o repositório:
 
-### 2.3 GOG - Good Old Games (Referência em Liberdade)
+   ```bash
+   git clone https://github.com/LeninLana/Projeto-Iara-Games.git
+   ```
 
-🟢 **Pontos Positivos:** Proposta sem DRM (jogos offline) e foco em nichos (nostalgia).
+2. Acesse a pasta do projeto:
 
-🔴 **Pontos Negativos:** Escolha de cores e organização de cards que podem tornar a interface confusa e poluída.
+   ```bash
+   cd Projeto-Iara-Games
+   ```
 
-🟣 **Lição:** Manteremos a transparência com o usuário, mas com uma hierarquia visual limpa e moderna.
+3. Abra o arquivo `index.html` no navegador.
 
-## 3. Diretrizes de Identidade Visual 💻
+Também é possível usar uma extensão de servidor local, como o Live Server, mas ela não é obrigatória.
 
-### 3.1 Paleta de Cores (O Conceito das Águas)
+## Interações em JavaScript
 
-**Primária:** Azul Profundo `(#0A192F)` e branco `(#fff)` - Representa a profundidade dos rios e a base tecnológica.
+### Favoritos
 
-**Secundária:** Azul Leve `(#2B65BA)` - Remete ao brilho da água e serve para botões de ação (CTA).
+Nas páginas individuais, o botão de salvar utiliza `aria-pressed` para representar seu estado. Ao ser ativado, o ícone é preenchido e o rótulo acessível passa a indicar a opção de remover o jogo dos favoritos.
 
-**Acento:** Amarelo Suave `(#D3CF09)` - Contraste quente para notificações e elementos de destaque emocional.
+O estado é mantido somente durante a permanência na página. Persistência com `localStorage` ou banco de dados não faz parte desta fase.
 
-### 3.2 Tipografia
+### Notificação
 
-**Títulos:** Montserrat ou Syne (Bold). Transmite modernidade e autoridade.
+Ao salvar um jogo, uma mensagem temporária confirma a ação. A notificação utiliza uma região de status para também ser anunciada por tecnologias assistivas.
 
-**Corpo:** Inter ou Roboto. Foco total em legibilidade técnica e conforto visual.
+### Filtro por categoria
 
-### 3.3 Decisões Visuais Estratégicas
+O filtro atua sobre a seção “Todos os jogos”. A categoria selecionada controla quais cards permanecem visíveis e atualiza a quantidade de resultados exibida.
 
-✔️ **Suavidade (Bordas):** Uso de cantos arredondados (12px) para tornar a plataforma mais acolhedora e menos rígida.
+## Acessibilidade e responsividade
 
-✔️ **Profundidade (Glassmorphism):** Elementos de interface levemente transparentes que simulam a superfície da água, trazendo modernidade sem poluir.
+- Uso de HTML semântico e textos alternativos nas imagens.
+- Estados dos controles comunicados com atributos ARIA.
+- Foco visível nos botões do filtro.
+- Conteúdo acessível mesmo quando o JavaScript não é executado.
+- Adaptação do layout para diferentes larguras de tela.
 
-✔️ **Grid Adaptável:** Organização de cards que se ajusta ao tamanho da tela, evitando os espaços vazios observados na Epic Games.
+## Status
 
-## 4. Usabilidade e Acessibilidade (UX/UI)✒️
-
-- **Fluxo de Compra:** Otimizado para ser concluído em poucos cliques, inspirando-se na eficiência da Steam.
-
-- **Acessibilidade:** Verificação de contraste (WCAG AA) e suporte a leitores de tela.
-
-- **Responsividade Total:** Design adaptável para desktop e mobile, garantindo que o "encanto" da Iara funcione em qualquer dispositivo.
-
-## 5. Conclusão da Integração 📝
-
-👉 A partir das melhores práticas observadas e da identidade visual definida, a Iara Games se posiciona como uma plataforma **eficiente, intuitiva e culturalmente relevante.** O design não será apenas estético, mas uma ferramenta para facilitar o acesso aos jogos e fortalecer a comunidade gamer brasileira.
+Projeto acadêmico em desenvolvimento.

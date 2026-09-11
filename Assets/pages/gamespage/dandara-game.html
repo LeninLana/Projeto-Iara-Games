@@ -101,10 +101,18 @@
 
                             <div class="game-buttons">
 
-                                <button class="btn favorite button-secondary">
+                                <button class="btn button-secondary button-icon save-button" type="button" aria-label="Salvar jogo" aria-pressed="false">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M6 4.5h12a1 1 0 0 1 1 1V19l-7-4.5L5 19V5.5a1 1 0 0 1 1-1Z"></path>
+                                    </svg>
+                                </button>
 
-                                    <p>☆</p>
-
+                                <button class="btn button-secondary button-icon cart-button" type="button" aria-label="Adicionar ao carrinho" aria-pressed="false">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <circle cx="9" cy="18" r="1.5"></circle>
+                                        <circle cx="17" cy="18" r="1.5"></circle>
+                                        <path d="M3 4h2l2.1 9.2a1 1 0 0 0 1 .8h9.9a1 1 0 0 0 1-.8L19 7H7"></path>
+                                    </svg>
                                 </button>
 
                                 <button class="btn button-primary">
@@ -126,6 +134,8 @@
         </section>
 
     </main>
+
+    <script src="../../JS/saveGame.js"></script>
 
 </body>
 
